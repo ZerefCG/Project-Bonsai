@@ -56,7 +56,7 @@ body{
     margin: 0 auto;
 }
 
-/* HEADER STYLES */
+/*=============== HEADER STYLES ===============*/
 
 .header{
     border-bottom: var(--border);
@@ -66,6 +66,7 @@ body{
     min-height: 100%;
     background-color: var(--white);
 }
+
 /* position items with flex */
 .header__container--flex{
     display: flex;
@@ -218,7 +219,6 @@ body{
     font-size: 1.5rem;
     font-weight: 500;
     padding: 2rem;
-    overflow: hidden;
     border-radius:var(--border-radius-sm);
     box-shadow: var(--box--shadow);
 }
@@ -284,9 +284,9 @@ body{
 }
 
 /*CARD BONUS BLOCK*/
-
 .cards__bonus{
     margin:1.5rem 0;
+    flex-grow: 1;
 }
 
 /* card adventages styles on flex for icon and text side by side */
@@ -294,7 +294,7 @@ body{
     display: flex;
     align-items: center;
     gap: 2rem;
-    margin:2rem 0;
+    margin:1.5rem 0;
  }
 
  /* ICON CHECKED */
@@ -490,7 +490,10 @@ body{
 .questions__a:focus .questions__icon{
     transform: rotate(180deg);
 }
-
+/* default cursor when focus on menu item */
+.questions__a:focus{
+    cursor:default;
+}
 
 /* styles of height on focus */
 .questions__a:focus ~ .questions__p{
@@ -498,12 +501,12 @@ body{
     max-height: auto;
 }
 
+/* fixing item 3 don't need so much height */
 .questions__a:focus ~ .questions__p--height{
     min-height: 5rem;
     max-height: auto;
 }
 
-/* fixing item 3 don't need so much height */
 
 
 /*=============== REVIEWS STYLES ===============*/
